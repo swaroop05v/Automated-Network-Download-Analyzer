@@ -7,7 +7,7 @@ df = pd.read_csv("log.csv", names=["timestamp", "size", "time", "speed"])
 
 df["timestamp"] = pd.to_datetime(df["timestamp"])
 df["hour"] = df["timestamp"].dt.hour
-df["speed_mb"] = df["speed"] / (1024 * 1024)
+df["speed_mb"] = df["speed"] 
 
 print("\n===== STATISTICS =====")
 print("Average Speed:", df["speed_mb"].mean(), "MB/s")

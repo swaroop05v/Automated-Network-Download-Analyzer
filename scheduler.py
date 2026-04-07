@@ -19,14 +19,15 @@ def run():
         print(f"Time: {time_taken:.2f} sec")
         print(f"Speed: {speed_mb:.2f} MB/s")
 
-        log_data(file_size, time_taken, speed)
+        log_data(file_size, time_taken, speed_mb)
 
     except Exception as e:
         print("Error:", e)
 
-# Run multiple times (demo = 5 runs)
-for i in range(5):
+i = 0
+while(1):
     print(f"\nRun {i+1}")
+    i += 1
     run()
 
-    time.sleep(60)  # 1 minute (change to 3600 for real)
+    time.sleep(5)  # 1 minute (change to 3600 for real)
